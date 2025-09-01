@@ -1,0 +1,30 @@
+public class Solution {
+    public static int[] bubbleSort(int[] nums) {
+        int largest;
+        for(int i=0;i<nums.length-1;i++){
+            largest=i;
+            int count=0;
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[largest]>=nums[j]){
+                    int temp=nums[largest];
+                    nums[largest]=nums[j];
+                    nums[j]=temp;
+                    count++;
+                }
+            }
+            if(count==0){
+                    break;
+            }
+        }
+        return nums;
+    }
+
+    public static void main(String args[]){
+
+        int nums[]={1,7,3,1,9,4};
+        bubbleSort(nums);
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i]+" ");
+        }
+    }
+}
