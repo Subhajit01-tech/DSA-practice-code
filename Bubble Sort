@@ -1,13 +1,11 @@
 public class Solution {
     public static int[] bubbleSort(int[] nums) {
-        int largest;
         for(int i=0;i<nums.length-1;i++){
-            largest=i;
             int count=0;
-            for(int j=i+1;j<nums.length;j++){
-                if(nums[largest]>=nums[j]){
-                    int temp=nums[largest];
-                    nums[largest]=nums[j];
+            for(int j=0;j<nums.length-i-1;j++){
+                if(nums[j]>=nums[j+1]){
+                    int temp=nums[j+1];
+                    nums[j+1]=nums[j];
                     nums[j]=temp;
                     count++;
                 }
